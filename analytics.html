@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analytics — JobTrackr AI</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">⚡ JobTrackr AI</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+    <li><a href="analyzer.html">AI Analyzer</a></li>
+    <li><a href="analytics.html" class="active">Analytics</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="container">
+
+    <div class="page-header">
+      <h1>📊 Analytics</h1>
+      <p>Visualize your job search progress</p>
+    </div>
+
+    <!-- STATS -->
+    <div class="stats-grid">
+      <div class="stat-card blue">
+        <div class="stat-icon">📨</div>
+        <div class="stat-value" id="a-total">0</div>
+        <div class="stat-label">Total Applied</div>
+      </div>
+      <div class="stat-card yellow">
+        <div class="stat-icon">🗣️</div>
+        <div class="stat-value" id="a-interviews">0</div>
+        <div class="stat-label">Interviews</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-icon">🎉</div>
+        <div class="stat-value" id="a-offers">0</div>
+        <div class="stat-label">Offers</div>
+      </div>
+      <div class="stat-card red">
+        <div class="stat-icon">❌</div>
+        <div class="stat-value" id="a-rejected">0</div>
+        <div class="stat-label">Rejected</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-value" id="a-rate">0%</div>
+        <div class="stat-label">Success Rate</div>
+      </div>
+    </div>
+
+    <!-- CHARTS ROW -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1.5rem;" class="charts-grid">
+
+      <!-- Monthly Applications Bar Chart -->
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">📅 Monthly Applications</div>
+        </div>
+        <div class="chart-container">
+          <canvas id="monthlyChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Status Pie Chart -->
+      <div class="card">
+        <div class="section-header">
+          <div class="section-title">🥧 Application Status</div>
+        </div>
+        <div class="chart-container">
+          <canvas id="statusChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS FUNNEL -->
+    <div class="card" style="margin-bottom:1.5rem;">
+      <div class="section-header">
+        <div class="section-title">🔽 Application Funnel</div>
+        <span style="font-size:.8rem;color:var(--text3);">Conversion at each stage</span>
+      </div>
+      <div id="funnel-container" style="padding:1rem 0;"></div>
+    </div>
+
+    <!-- INSIGHTS -->
+    <div class="card">
+      <div class="section-header">
+        <div class="section-title">💡 Smart Insights</div>
+      </div>
+      <div id="insights-container" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;"></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container"></div>
+<script src="js/app.js"></script>
+<script src="js/analytics.js"></script>
+
+<style>
+@media (max-width: 768px) {
+  .charts-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+</body>
+</html>
