@@ -34,13 +34,13 @@ Job seekers apply to 50-100 companies and lose track of everything. **AI Job Tra
 ## 🖥️ Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](dashboard.png)
 
 ### AI Analyzer
-![Analyzer](screenshots/analyzer.png)
+![Analyzer](analyzer.png)
 
 ### Analytics
-![Analytics](screenshots/analytics.png)
+![Analytics](analytics.png)
 
 ---
 
